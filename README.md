@@ -78,3 +78,8 @@ Give the service role key server-only access. Do not expose it to the client.
 
 ## Resend sender
 Verify your sending domain and set `RESEND_FROM_EMAIL` (e.g., orders@natureswaysoil.com).
+
+## Live chat (Crisp)
+- Set `NEXT_PUBLIC_CRISP_WEBSITE_ID` in `.env.local` to your Crisp website ID.
+- If not set, the chat widget is not loaded.
+- Sign up at crisp.chat, create a website, copy the Website ID.
