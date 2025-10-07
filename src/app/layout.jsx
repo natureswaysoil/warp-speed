@@ -2,7 +2,7 @@ import './globals.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { CartProvider } from '../components/CartProvider'
-import ChatWidget from '../components/ChatWidget'
+import ChatAssistant from '../components/ChatAssistant'
 
 export const metadata = {
   title: "Nature's Way Soil",
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <main className="container">{children}</main>
           <Footer />
         </CartProvider>
-        <ChatWidget />
+        <ChatAssistant />
       </body>
     </html>
   )
