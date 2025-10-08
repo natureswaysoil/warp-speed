@@ -53,6 +53,7 @@ Note: Replace placeholders in {{UPPER_SNAKE_CASE}} with your actual secrets. Do 
 - `src/app/api/checkout/route.js` — Stripe Checkout session creation
 - `src/app/api/stripe/webhook/route.js` — Stripe webhook handler (emails + Subbase)
 - `src/app/api/subscribe/route.js` — Newsletter/lead capture into Subbase
+- `src/app/api/health/supabase/route.js` — Health check for Supabase config/table access
 
 ## Customizing Products
 - Easiest: Edit `src/lib/products.js` to change product names, prices (in cents), descriptions, and images.
@@ -60,7 +61,8 @@ Note: Replace placeholders in {{UPPER_SNAKE_CASE}} with your actual secrets. Do 
   - `PRODUCTS_SOURCE_URL=https://raw.githubusercontent.com/your-org/your-repo/main/products.json`
 
 ## Subbase schema
-Create a `customers` table with at least:
+- The server uses `SUPABASE_SERVICE_ROLE_KEY` and accepts either `SUPABASE_URL` or `NEXT_PUBLIC_SUPABASE_URL`.
+- Create a `customers` table with at least:
 - `email` text PRIMARY KEY or unique
 - `source` text
 - `created_at` timestamp with time zone default now()
